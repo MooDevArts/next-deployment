@@ -14,14 +14,16 @@ const MenuAdd = ({ name, description }) => {
   };
 
   return (
-    <div className="absolute bottom-40 right-4 flex flex-col items-end gap-2">
-      <button
-        onClick={() => addTask(name, description)}
-        className="button green"
-      >
-        Add
-      </button>
-      <Button href="/" color="yellow" text="Back"></Button>
+    <div className="absolute bottom-40 right-4">
+      <div className="flex flex-col items-end gap-2">
+        <button
+          onClick={() => addTask(name, description)}
+          className="button green"
+        >
+          Add
+        </button>
+        <Button href="/" color="yellow" text="Back"></Button>
+      </div>
       <ToastContainer />
     </div>
   );
