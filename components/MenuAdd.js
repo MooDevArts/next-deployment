@@ -7,7 +7,10 @@ import { addTask } from "@/app/actions/addtask";
 const MenuAdd = ({ name, description }) => {
   const addsTask = async (name, desc) => {
     if (!name) {
-      toast("name pls");
+      toast.error("name pls", {
+        autoClose: 2000,
+        theme: "dark",
+      });
       return;
     }
     console.log(name, desc);
