@@ -1,4 +1,4 @@
-export const listTasks = () => {
+export const listTasks = async () => {
   const raw = "";
 
   const requestOptions = {
@@ -7,8 +7,9 @@ export const listTasks = () => {
     redirect: "follow",
   };
 
-  fetch("/api/list", requestOptions)
-    .then((response) => response.text())
-    .then((result) => console.log(result))
-    .catch((error) => console.error(error));
+  const result = await fetch("/api/list", requestOptions);
+
+  console.log("result");
+
+  return result;
 };
