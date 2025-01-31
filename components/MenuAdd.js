@@ -2,14 +2,16 @@ import React, { useState } from "react";
 import Button from "./Button";
 import { ToastContainer, toast } from "react-toastify";
 import { redirect } from "next/navigation";
+import { addTask } from "@/app/actions/addtask";
 
 const MenuAdd = ({ name, description }) => {
-  const addTask = async (name, desc) => {
+  const addsTask = async (name, desc) => {
     if (!name) {
       toast("name pls");
       return;
     }
-    toast("added");
+    console.log(name, desc);
+    addTask(name, desc);
     redirect("/");
   };
 
@@ -17,7 +19,7 @@ const MenuAdd = ({ name, description }) => {
     <div className="absolute bottom-40 right-4">
       <div className="flex flex-col items-end gap-2">
         <button
-          onClick={() => addTask(name, description)}
+          onClick={() => addsTask(name, description)}
           className="button green"
         >
           Add
