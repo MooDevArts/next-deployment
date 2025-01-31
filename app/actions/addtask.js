@@ -14,7 +14,7 @@ export const addTask = (name, desc) => {
     redirect: "follow",
   };
 
-  fetch("http://localhost:3000/api/add", requestOptions)
+  fetch("/api/add", requestOptions)
     .then((response) => response.text())
     .then((result) => console.log(result))
     .catch((error) => console.error(error));
