@@ -1,12 +1,12 @@
 import React from "react";
 import Button from "@/components/Button";
 
-const Menu = () => {
+const MenuBack = () => {
   return (
     <div className="absolute bottom-40 right-4">
-      <Button href="/add" color="green" text="Add"></Button>
+      <Button href="/" color="yellow" text="Back"></Button>
     </div>
   );
 };
 
-export default Menu;
+export default MenuBack;
